@@ -1,0 +1,40 @@
+section {
+    position: absolute;
+    display: flex;
+    max-width: none;
+    width: auto;
+    animation: scroll 20s linear;
+    left: 0;
+    overflow: hidden; /* Ensures the text outside the section is not visible */
+    white-space: nowrap; /* Prevents wrapping of text */
+  }
+  .carousel {
+    display: flex;
+    white-space: nowrap; /* Prevent wrapping */
+    animation: scroll 20s linear; /* Continuous scroll animation */
+  }
+  section p {
+    color: #b9b9b9;
+    font-size: 24px;
+    overflow: hidden;
+    padding-right: 100px;
+    display: inline-block; /* Ensures each <p> behaves as a single block */
+    margin: 0; /* Removes any default margin */
+    flex-shrink: 0;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0); /* Start at the default position */
+    }
+    100% {
+      transform: translateX(-100%); /* Scroll the entire width of the section */
+    }
+  }
+  
+  section {
+    animation: scroll 10s linear infinite; /* Adjust timing for speed */
+  }
+  
