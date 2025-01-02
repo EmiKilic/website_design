@@ -1,9 +1,8 @@
 section {
     position: absolute;
     display: flex;
-    max-width: none;
+    max-width: 100%;
     width: auto;
-    animation: scroll 20s linear;
     left: 0;
     overflow: hidden; /* Ensures the text outside the section is not visible */
     white-space: nowrap; /* Prevents wrapping of text */
@@ -11,7 +10,7 @@ section {
   .carousel {
     display: flex;
     white-space: nowrap; /* Prevent wrapping */
-    animation: scroll 20s linear; /* Continuous scroll animation */
+    animation: scroll 400s linear infinite; /* Adjust timing for speed */
   }
   section p {
     color: #b9b9b9;
@@ -33,8 +32,3 @@ section {
       transform: translateX(-100%); /* Scroll the entire width of the section */
     }
   }
-  
-  section {
-    animation: scroll 10s linear infinite; /* Adjust timing for speed */
-  }
-  

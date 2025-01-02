@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import e from 'express';
 
 @Component({
   selector: 'app-carousel',
@@ -28,17 +27,15 @@ export class CarouselComponent {
     'ENGAGING'
   ];
 
-  infiniteWords: string[] = []; // This will hold the infinite list of words
+  infiniteWords: string[] = [];
 
   ngOnInit(): void {
-    this.startInfiniteText();
+    this.initializeInfiniteText();
   }
 
-  startInfiniteText(): void {
-
-    for (let i = 0; i < this.words.length; i++) {
-      const element = this.words[i];
-      this.infiniteWords.push(element);
-    }
+  initializeInfiniteText(): void {
+    // Create an infinite array of words by repeating the original list
+    this.infiniteWords = [...this.words, ...this.words, ...this.words, ...this.words, ...this.words, ...this.words, ...this.words];
   }
+
 }
