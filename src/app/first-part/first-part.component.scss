@@ -73,7 +73,7 @@ section {
                     color: #C4BEFF;
                     background-color: #1E1E1E;
                     transition: 0.5s;
-                    
+
                 }
 
                 .button-arrow {
@@ -112,3 +112,56 @@ section {
         transform: translateX(0);
     }
 }
+
+.section {
+    display: flex;
+    flex-direction: column !important;
+    max-width: 1440px;
+    align-items: center !important;
+    width: 100%;
+    justify-content: space-around !important;
+    overflow: hidden; /* Hide overflowing content */
+  }
+  
+  .carousel-row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column; /* Two rows stacked vertically */
+    height: 90%;
+  }
+  
+  .carousel {
+    display: flex; /* Ensure items are in a row */
+    flex-wrap: nowrap;
+    gap: 16px;
+    height: 45%;
+    animation: scroll 60s linear infinite; /* Smooth scrolling animation */
+  }
+  
+  .reverse {
+    animation-direction: reverse; /* Make the second row scroll in reverse for a cool effect */
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto; /* Prevent shrinking or growing */
+    width: auto; /* Set desired width */
+    height: 100%; /* Set desired height */
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Optional rounded corners */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  
