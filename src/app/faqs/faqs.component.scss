@@ -1,0 +1,131 @@
+section {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding-top: 20px;
+    max-width: 1440px;
+    align-items: start;
+    justify-content: start;
+
+    mat-card {
+        width: 100%;
+        height: 40vh;
+        background-color: #121212;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        padding-left: 36px;
+
+        h4 {
+            font-size: 24px;
+            color: #C4BEFF;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 400;
+            color: white;
+            margin: 0;
+        }
+
+        p {
+            width: 90%;
+            font-size: 20px;
+            color: #b9b9b9;
+            font-weight: 400;
+        }
+
+        .call-to-action {
+            button {
+                border: 1px solid #C4BEFF;
+                background-color: #C4BEFF;
+                color: #1E1E1E;
+                font-size: 18px;
+                height: 48px;
+                width: 198px;
+                border-radius: 10px;
+                margin-right: 5px;
+            }
+
+            .button-arrow {
+                width: 60px;
+                padding: 0px;
+                color: #C4BEFF;
+                background-color: #1E1E1E;
+                overflow: hidden;
+
+                mat-icon {
+                    overflow: hidden;
+                    width: 200px;
+                    margin: 0;
+                    display: flex;
+                    left: -8px;
+                }
+
+                .first-arrow {
+                    left: -37px !important;
+                }
+
+            }
+
+            &:hover {
+                button {
+                    color: #C4BEFF;
+                    background-color: #1E1E1E;
+                    transition: 0.5s;
+
+                }
+
+                .button-arrow {
+                    background-color: transparent;
+
+                    mat-icon {
+                        animation: moveArrow 0.2s linear forwards;
+                    }
+                }
+            }
+
+            &:not(:hover) mat-icon {
+                animation: moveArrowBack 0.2s linear forwards;
+            }
+        }
+    }
+}
+
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(60px);
+    }
+
+}
+
+@keyframes moveArrowBack {
+    0% {
+        transform: translateX(60px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.layout {
+    background-color: #1E1E1E;
+    width: 95%;
+    margin-bottom: 20px;
+
+    mat-panel-title {
+        font-size: 20px;
+        color: #b9b9b9;
+    }
+
+    p {
+        font-size: 15px;
+        color: #b9b9b9;
+    }
+}
