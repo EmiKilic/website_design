@@ -39,22 +39,22 @@ section {
         .call-to-action {
             button {
                 border: 1px solid #C4BEFF;
-                background-color: #C4BEFF;
-                color: #1E1E1E;
+                background-color: #1E1E1E;
+                color: #C4BEFF;
                 font-size: 18px;
                 height: 48px;
                 width: 198px;
                 border-radius: 10px;
                 margin-right: 5px;
             }
-
+        
             .button-arrow {
                 width: 60px;
                 padding: 0px;
                 color: #C4BEFF;
                 background-color: #1E1E1E;
                 overflow: hidden;
-
+        
                 mat-icon {
                     overflow: hidden;
                     width: 200px;
@@ -62,24 +62,26 @@ section {
                     display: flex;
                     left: -8px;
                 }
-
+        
                 .first-arrow {
                     left: -37px !important;
                 }
-
+        
             }
-
+        
             &:hover {
                 button {
-                    color: #C4BEFF;
-                    background-color: #1E1E1E;
+                    color: #1E1E1E;
+                    background-color: #C4BEFF;
                     transition: 0.5s;
-
+        
                 }
-
+        
                 .button-arrow {
+                color: #C4BEFF;
+        
                     background-color: transparent;
-
+        
                     mat-icon {
                         animation: moveArrow 0.2s linear forwards;
                     }

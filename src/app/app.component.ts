@@ -6,10 +6,12 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { ProcessComponent } from './process/process.component';
 import { StackingCardsComponent } from './stacking-cards/stacking-cards.component';
 import { FAQSComponent } from './faqs/faqs.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [MatToolbarModule, ProcessComponent,MatButtonModule, StackingCardsComponent,FirstPartComponent, CarouselComponent, FAQSComponent],
+  imports: [MatToolbarModule, HeaderComponent,ProcessComponent,MatButtonModule, StackingCardsComponent,FirstPartComponent, CarouselComponent, FAQSComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
