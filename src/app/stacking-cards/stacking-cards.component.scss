@@ -197,10 +197,11 @@ p {
     border-radius: 10px;
     margin-right: 5px;
     font-weight: 400;
+
     &:hover {
         color: #C4BEFF;
-                    background-color: #1E1E1E;
-                    transition: 0.5s;
+        background-color: #1E1E1E;
+        transition: 0.5s;
     }
 }
 
@@ -212,4 +213,144 @@ aside {
 
 aside p {
     margin-bottom: 1em;
+}
+
+/* Standard-Styling für Desktop (Default bleibt unverändert) */
+
+/* max-width: 1024px (Tablets Querformat und kleine Desktops) */
+@media screen and (max-width: 1024px) {
+    .card__content {
+        grid-template-areas:
+            "text"
+            "img";
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    mat-card {
+        padding: 20px;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: none;
+        /* Button wird ausgeblendet */
+    }
+
+    p {
+        width: 100%;
+    }
+
+    .card__content>figure {
+        margin: 0;
+        height: 300px;
+    }
+
+    .btn {
+        width: 150px;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90vw;
+    }
+
+    #cards {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    }
+}
+
+/* max-width: 768px (Tablets Hochformat) */
+@media screen and (max-width: 768px) {
+    .card {
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card__content {
+        height: auto;
+        text-align: center;
+    }
+
+    mat-card {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .card__content>figure {
+        height: 250px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .btn {
+        width: 120px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* max-width: 576px (große Smartphones) */
+@media screen and (max-width: 576px) {
+    main {
+        padding: 0 10px;
+    }
+
+    .card__content>figure>img {
+        height: 200px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+
+}
+
+/* max-width: 480px (kleine Smartphones) */
+@media screen and (max-width: 480px) {
+    .card__content {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .card__content>figure {
+        height: 180px;
+    }
+}
+
+/* max-width: 320px (sehr kleine Smartphones) */
+@media screen and (max-width: 320px) {
+    .card__content>figure>img {
+        height: 150px;
+    }
+
+    h2,
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
 }
