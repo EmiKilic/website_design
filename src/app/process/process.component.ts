@@ -7,7 +7,7 @@ import { MatIcon } from '@angular/material/icon';
   selector: 'app-process',
   imports: [MatCard, MatIcon, MatButtonModule],
   templateUrl: './process.component.html',
-  styleUrls: ['./process.component.scss', '../first-part/first-part.component.scss']
+  styleUrls: ['./process.component.scss']
 })
 export class ProcessComponent {
 
