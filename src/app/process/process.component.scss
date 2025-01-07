@@ -5,13 +5,14 @@ section {
 
     .left-part {
         height: 90vh;
+        width: 117.5%;
 
         mat-card {
-            height: 51%;
+            height: 500px;
         }
 
         img {
-            height: 50%;
+            height: 500px;
             width: 100%;
             margin-top: 20px;
             border-radius: 10px;
@@ -20,7 +21,7 @@ section {
     }
 
     .steps {
-        height: 22vh;
+        height: 240px;
         margin-bottom: 20px;
 
         .topper {
@@ -57,3 +58,4 @@ section {
         
     }
 }
+

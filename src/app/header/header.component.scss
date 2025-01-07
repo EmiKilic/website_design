@@ -11,17 +11,19 @@
     height: 80px;
     padding-left: 20px;
     padding-right: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 
     .logo {
         font-weight: 600;
         font-size: 28px;
         letter-spacing: 4px;
+        cursor: pointer;
     }
     .header-menu {
         display: flex;
         align-items: center;
         width: 50%;
-        background-color: #121212;
 
         .mat-toolbar {
             display: flex;
@@ -51,7 +53,120 @@
                 color: #1E1E1E;
                 background-color: #C4BEFF;
                 transition: 0.5s;
+                cursor: pointer;
             }
         }
+    }
+}
+
+/* Media Queries */
+
+/* Large tablets and small desktops (max width 1024px) */
+@media (max-width: 1024px) {
+    .header-menu {
+        width: 60%;
+    }
+
+    .mat-toolbar {
+        gap: 20px;
+    }
+
+    button {
+        width: 150px;
+        font-size: 16px;
+    }
+}
+
+/* Tablets (max width 768px) */
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 12px;
+    }
+
+    .logo {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    .header-menu {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mat-toolbar {
+        width: 100%;
+        justify-content: center; /* Center the menu items */
+        gap: 16px;
+    }
+
+    button {
+        margin-top: 12px;
+        width: 140px;
+        font-size: 16px;
+    }
+}
+
+/* Large smartphones (max width 576px) */
+@media (max-width: 576px) {
+    .header {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .logo {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .header-menu {
+        flex-direction: column; /* Keep stacking for smaller screens */
+        width: 100% !important;
+        align-items: center;
+
+        .mat-toolbar {
+            width: 100%;
+            gap: 12px;
+            justify-content: center !important;
+        }
+    }
+
+    
+
+    button {
+        display: none;
+    }
+}
+
+/* Small smartphones (max width 480px) */
+@media (max-width: 480px) {
+    .header-menu {
+        gap: 12px;
+    }
+
+    .mat-toolbar {
+        gap: 8px;
+        justify-content: center;
+    }
+}
+
+/* Extra small smartphones (320px) */
+@media (max-width: 320px) {
+    .logo {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .mat-toolbar {
+        gap: 4px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mat-toolbar span {
+        font-size: 14px;
     }
 }
