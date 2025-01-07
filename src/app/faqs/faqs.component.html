@@ -13,6 +13,7 @@
     </mat-card>
 
     <mat-card class="section">
+        <mat-accordion multi="false">
         <mat-expansion-panel class="layout" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
             <mat-expansion-panel-header>
                 <mat-panel-title> How long does it take to complete a project? </mat-panel-title>
@@ -48,5 +49,6 @@
             <p>I believe in open communication and iterative feedback. After presenting drafts or milestones, I welcome
                 feedback and make revisions accordingly to ensure the project meets your needs.</p>
         </mat-expansion-panel>
+    </mat-accordion>
     </mat-card>
 </section>
