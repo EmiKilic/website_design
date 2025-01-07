@@ -1,6 +1,5 @@
 section {
     margin-top: 200px;
-    margin-bottom: 200px;
     padding-top: 30px !important;
     display: flex;
     width: 100%;
@@ -175,6 +174,7 @@ section {
 @media (max-width: 1400px) {
     section {
         margin-top: 200px !important;
+        margin-bottom: 200px;
         display: flex;
         flex-direction: column;
         justify-content: center !important;

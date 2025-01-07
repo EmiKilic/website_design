@@ -63,6 +63,7 @@ footer {
                 padding-right: 15px;
             }
         }
+
         .icons {
             img {
                 height: 30px;
@@ -79,9 +80,11 @@ footer {
         bottom: 0px;
         display: flex;
         justify-content: space-between;
+
         .rights {
             color: #b9b9b9;
         }
+
         a {
             color: #b9b9b9;
             text-decoration: underline;
@@ -185,4 +188,118 @@ section {
     display: flex;
     justify-content: space-between;
     height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    footer {
+        height: 800px;
+
+        .first-section {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .footer-first-part {
+                justify-content: flex-start;
+
+                h1 {
+                    font-size: 36px;
+                }
+            }
+        }
+
+        .call-to-action {
+            align-items: flex-start;
+        }
+
+        .second-section {
+            flex-direction: column;
+            width: 90vw;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            padding-top: 50px;
+            .links {
+                flex-direction: column;
+            }
+        }
+    }
+    .third-section {
+        flex-direction: column;
+        padding: 20px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        .first-section {
+            .footer-first-part h1 {
+                font-size: 32px;
+            }
+        }
+
+
+    }
+}
+
+@media (max-width: 576px) {
+    footer {
+        padding: 20px;
+
+        .first-section {
+            .footer-first-part {
+                h1 {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .second-section .icons img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        .first-section {
+            .footer-first-part {
+                h1 {
+                    font-size: 24px;
+                }
+            }
+        }
+
+
+    }
+}
+
+@media (max-width: 320px) {
+    footer {
+        padding: 10px;
+
+        .first-section {
+            .footer-first-part {
+                h1 {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .second-section {
+            .links a {
+                font-size: 12px;
+            }
+
+            .icons img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
 }
