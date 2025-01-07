@@ -61,6 +61,9 @@ footer {
                 color: #b9b9b9;
                 font-size: 20px;
                 padding-right: 15px;
+                &:hover {
+                    color: #C4BEFF;
+                }
             }
         }
 
@@ -88,6 +91,7 @@ footer {
         a {
             color: #b9b9b9;
             text-decoration: underline;
+            cursor: pointer;
         }
     }
 }
@@ -219,11 +223,13 @@ section {
             justify-content: flex-start;
             gap: 20px;
             padding-top: 50px;
+
             .links {
                 flex-direction: column;
             }
         }
     }
+
     .third-section {
         flex-direction: column;
         padding: 20px !important;
@@ -267,6 +273,8 @@ section {
 
 @media (max-width: 480px) {
     footer {
+        height: 80vh;
+
         .first-section {
             .footer-first-part {
                 h1 {

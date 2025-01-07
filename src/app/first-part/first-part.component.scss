@@ -130,11 +130,14 @@ section {
   }
   
   .carousel {
-    display: flex; /* Ensure items are in a row */
+    display: flex;
     flex-wrap: nowrap;
     gap: 16px;
     height: 45%;
-    animation: scroll 60s linear infinite; /* Smooth scrolling animation */
+    animation: scroll 60s linear infinite;
+    -webkit-animation: scroll 60s linear infinite;
+    white-space: nowrap; /* Fallback for older browsers */
+    transform: translate3d(0, 0, 0); /* Hardware acceleration */
   }
   
   .reverse {
@@ -150,12 +153,12 @@ section {
   img {
     width: 100%;
     height: 100%;
-    -webkit-height: 100%;
-    -webkit-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
     object-fit: cover;
     -webkit-object-fit: cover;
-    border-radius: 8px; /* Optional rounded corners */
-  }
+    border-radius: 8px;
+  }  
   
   @keyframes scroll {
     0% {
