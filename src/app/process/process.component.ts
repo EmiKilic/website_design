@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCard } from '@angular/material/card';
-import { MatIcon } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-process',
-  imports: [MatCard, MatIcon, MatButtonModule],
+  imports: [MatCardModule, MatIconModule, MatButtonModule],
   templateUrl: './process.component.html',
   styleUrls: ['./process.component.scss']
 })

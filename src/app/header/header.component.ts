@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { MatToolbar } from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-header',
-  imports: [MatToolbar],
+  imports: [MatToolbarModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

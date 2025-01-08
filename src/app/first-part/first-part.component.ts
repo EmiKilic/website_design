@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,16 +8,10 @@ import { MatIconModule } from '@angular/material/icon';
   selector: 'app-first-part',
   imports: [MatCardModule, MatButtonModule, MatIconModule, CommonModule],
   templateUrl: './first-part.component.html',
-  styleUrl: './first-part.component.scss',
+  styleUrls: ['./first-part.component.scss'],
 })
-export class FirstPartComponent {
-  words: any[] = [
-    'assets/mockup_5.jpg',
-    'assets/mockup_4_1.jpg',
-    'assets/mockup_3.jpg',
-    'assets/mockup_5.jpg',
-    'assets/mockup_4_1.jpg',
-    'assets/mockup_3.jpg',
+export class FirstPartComponent implements OnInit {
+  words: string[] = [
     'assets/mockup_5.jpg',
     'assets/mockup_4_1.jpg',
     'assets/mockup_3.jpg',
@@ -26,23 +20,17 @@ export class FirstPartComponent {
     'assets/mockup_3.jpg',
   ];
 
-  wordss: any[] = [
+  wordss: string[] = [
     'assets/mockup.jpeg',
     'assets/mockup_2.jpg',
     'assets/mockup_3_1.jpg',
     'assets/mockup_4.jpg',
     'assets/mockup.jpeg',
     'assets/mockup_2.jpg',
-    'assets/mockup_3_1.jpg',
-    'assets/mockup_4.jpg',
-    'assets/mockup.jpeg',
-    'assets/mockup_2.jpg',
-    'assets/mockup_3_1.jpg',
-    'assets/mockup_4.jpg',
   ];
 
-  infiniteWords: any[] = [];
-  infiniteWordss: any[] = [];
+  infiniteWords: string[] = [];
+  infiniteWordss: string[] = [];
 
   ngOnInit(): void {
     this.initializeInfiniteText();
@@ -50,12 +38,20 @@ export class FirstPartComponent {
   }
 
   initializeInfiniteText(): void {
-    // Create an infinite array of words by repeating the original list
-    this.infiniteWords = [...this.words, ...this.words, ...this.words, ...this.words, ...this.words, ...this.words, ...this.words];
+    if (this.words?.length) {
+      this.infiniteWords = Array(7).fill(this.words).flat(); // Safer repetition
+    } else {
+      console.warn('Words array is empty or null!');
+      this.infiniteWords = [];
+    }
   }
 
   initializeInfiniteTexts(): void {
-    // Create an infinite array of words by repeating the original list
-    this.infiniteWordss = [...this.wordss, ...this.wordss, ...this.wordss, ...this.wordss, ...this.wordss, ...this.wordss, ...this.wordss];
+    if (this.wordss?.length) {
+      this.infiniteWordss = Array(7).fill(this.wordss).flat();
+    } else {
+      console.warn('Wordss array is empty or null!');
+      this.infiniteWordss = [];
+    }
   }
 }

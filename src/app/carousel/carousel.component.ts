@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
+  standalone: true, // This is optional if you're using standalone components
   imports: [CommonModule],
   templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.scss'
+  styleUrls: ['./carousel.component.scss'],
 })
-export class CarouselComponent {
+export class CarouselComponent implements OnInit, AfterViewInit {
   words: string[] = [
     'RESPONSIVE',
     'ADAPTIVE',
@@ -24,18 +25,30 @@ export class CarouselComponent {
     'SLEEK',
     'MODERN',
     'HIGH-QUALITY',
-    'ENGAGING'
+    'ENGAGING',
   ];
 
   infiniteWords: string[] = [];
 
   ngOnInit(): void {
+    // Initialize the infinite text
     this.initializeInfiniteText();
   }
 
-  initializeInfiniteText(): void {
-    // Create an infinite array of words by repeating the original list
-    this.infiniteWords = [...this.words, ...this.words, ...this.words, ...this.words, ...this.words, ...this.words, ...this.words];
+  ngAfterViewInit(): void {
+    // Confirm the view has been fully initialized
+    console.log('Carousel component view initialized.');
   }
 
+  initializeInfiniteText(): void {
+    if (this.words && this.words.length > 0) {
+      console.log('Initializing words...');
+      // Repeat the array to create the "infinite" effect
+      this.infiniteWords = Array(5).fill(this.words).flat();
+      console.log('Infinite words initialized:', this.infiniteWords);
+    } else {
+      console.error('Words array is empty or undefined!');
+      this.infiniteWords = []; // Fallback to an empty array to avoid errors in the template
+    }
+  }
 }
